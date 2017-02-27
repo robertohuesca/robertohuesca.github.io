@@ -81,6 +81,33 @@ textarea {
     resize: vertical;
 }
 
+.navi ul > li {
+    padding: 5px 10px;
+    transition: all 0.5s;
+}
+.navi ul>li:hover{
+    background-color: rgba(0, 0, 0, 0.3)
+}
+ .navi ul>li>a{
+    color: white;
+}
+ .navi ul>li>a:hover{
+    color: white;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+/*FOOTER*/
+.col-lg-12 ul > li {
+    
+    transition: all 0.5s;
+}
+.col-lg-12 ul>li:hover{
+    background-color: rgba(0, 0, 0, 0.3)
+}
+ .col-lg-12 ul>li>a{
+    color: #2586c6;
+}
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -153,21 +180,6 @@ textarea {
    height: auto;
 }
 
-ul > li {
-    padding: 5px 10px;
-    transition: all 0.5s;
-}
-ul>li:hover{
-    background-color: rgba(0, 0, 0, 0.3)
-}
- ul>li>a{
-    color: white;
-}
- ul>li>a:hover{
-    color: white;
-    cursor:pointer;
-    text-decoration: none;
-}
 .logo{
    display: inline-block;
    position: absolute;
@@ -188,11 +200,12 @@ ul>li:hover{
 }
 
 /*************************
-*******Features CSS*******
+*******Features  CSS*******
 **************************/
 #features {
   text-align: center;
-  background-image: url(../img/twitter-bg.jpg);
+  background-image: url("../img/dividers/twitter-bg.jpg");
+  margin-top: 35px;
 }
 
 #features i {
@@ -217,7 +230,7 @@ ul>li:hover{
 /*************************
 *******Wrapper CSS*******
 **************************/
-#intro {
+/* #intro {
   padding: 100px 0;
 
 }
@@ -239,15 +252,17 @@ ul>li:hover{
 }
 #intro .section-title p {
   padding-top: 20px;
-}
+} */
 
 /*************************
-*******Features CSS*******
+*******Features Services CSS*******
 **************************/
 #service {
   text-align: center;
-  padding: 60px 0;
-  margin-top: 20px;
+  padding: 60px 0 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 #service .service-item {
   padding-bottom: 30px;
@@ -281,7 +296,7 @@ ul>li:hover{
 #logo-nav2{
     display: block;
 }
-/**/
+/*Services button*/
 .btn-services{
   padding: 15px 35px;
   border: none;
@@ -293,10 +308,10 @@ ul>li:hover{
   width: 200px;
 }
 /*--
-    call-to-action Start 
+    Divider 2 Start 
 --*/
 #call-to-action {
-  background: url("../img/h.jpeg") no-repeat;
+  background: url("../img/dividers/h.jpeg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   padding: 70px 0px;
@@ -334,6 +349,173 @@ ul>li:hover{
   font-size: 15px;
   color: #333333;
   margin-top: 30px;
+}
+.centered {
+    text-align: center;
+    width: 100%;
+}
+hr {
+    position: relative;
+    border: none;
+}
+
+hr:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: #ccc;
+}
+
+/* Section Dividers */
+.section-divider {
+    z-index: 999;
+    width: 100%;
+    display: table;
+    max-height: 450px;
+    border-bottom: 2px solid #E6EAED;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    margin-top: 45px;
+
+
+    background-position: center center;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-attachment: relative;
+    
+    text-align: center;
+}
+
+.textdivider h1 {
+	padding-top: 70px;
+	color: white;
+	font-size: 40px;
+}
+
+.textdivider p {
+	color: white;
+	font-size: 25px;
+}
+.white h1 {
+	padding-top: 60px;
+}
+
+.white h2{
+	margin-bottom: 60px;
+}
+
+.white p {
+	padding-top: 25px;
+}
+
+/*Dividers*/
+.divider1 {
+	background-image: url('../img/dividers/divider1.jpg')
+}
+/*Publicite Promotions*/
+
+#greywrap {
+	background: #f5f5f5;
+	margin-top: 20px;
+	padding-top: 40px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+#greywrap .col-lg-4{
+	margin-top: 60px;
+}
+#greywrap .callout {
+	margin-bottom: 20px;
+}
+
+#greywrap p {
+	margin-left: 30px;
+	margin-right: 30px;
+	letter-spacing: 1px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+#greywrap .icon {
+	font-size: 60px;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+/**/
+#team {
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ddd;
+}
+/**Banner*/
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url("../img/dividers/intro-bg.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.banner h2 {
+    margin: 0;
+    color: white;
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+
+/***/
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+/**Footer**/
+footer {
+    padding: 35px 0px 0px;
+    background-color: #f8f8f8;
+
+}
+.list-inline{
+	text-align: left;
+}
+.copyright {
+    margin: 15px 0 0;
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 30px;
 }
 /* ==========================================================================
    Helper classes
