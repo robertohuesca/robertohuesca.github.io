@@ -12,7 +12,7 @@
 	
 
 	let sticky = false;
-
+	var map;
 	$(document).ready(()=>{
 		const image_counter = parseInt($("[data-name='image_counter']").attr("content") - 1);
 		let current_position = 0;
@@ -47,6 +47,9 @@
 			$("#responsive-nav ul").toggleClass("active")
 			$("#menu-open").toggleClass("glyphicon-menu-hamburger")
 		})
+
+		// google map
+		
 	});
 
 	function isOpen(){
@@ -85,4 +88,11 @@
 		// $newDiv.removeClass("in")*/
 	}
 
+	
+		function initMap() {
+		  map = new google.maps.Map(document.getElementById('map'), {
+		    center: {lat: -34.397, lng: 150.644},
+		    zoom: 8
+		  });
+		}
 })();
