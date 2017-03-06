@@ -167,7 +167,7 @@ textarea {
     /*Cubre toda la pantalla*/
    min-width: 100%;
    min-height: 100%;
-   
+  
    /*Centrar Video*/
    position: absolute;
    top: 50%;
@@ -227,32 +227,6 @@ textarea {
     position: relative;
     padding: 60px 0px 50px 0px;
 }
-/*************************
-*******Wrapper CSS*******
-**************************/
-/* #intro {
-  padding: 100px 0;
-
-}
-#intro .block h2 {
-  padding-top: 35px;
-  line-height: 27px;
-  margin: 0;
-}
-#intro .block p {
-  color: #7B7B7B;
-  padding-top: 20px;
-}
-#intro .block img {
-  padding-left: 40px;
-  width: 100%;
-}
-#intro .section-title {
-  margin-bottom: 0px;
-}
-#intro .section-title p {
-  padding-top: 20px;
-} */
 
 /*************************
 *******Features Services CSS*******
@@ -306,6 +280,9 @@ textarea {
   margin-top: 30px;
   border-radius: 5px;
   width: 200px;
+}
+.btn-services a{
+  color: #fff;
 }
 /*--
     Divider 2 Start 
@@ -371,7 +348,7 @@ hr:before {
 
 /* Section Dividers */
 .section-divider {
-    z-index: 999;
+    /*z-index: 999;*/
     width: 100%;
     display: table;
     max-height: 450px;
@@ -397,9 +374,17 @@ hr:before {
     -o-background-size: cover;
     background-size: cover;
 
-    background-attachment: relative;
+    /*background-attachment: relative;*/
     
     text-align: center;
+
+   background: url('../img/dividers/divider1.jpg') no-repeat;
+  background-size: cover;
+  /*padding-top: 150px;
+  padding-bottom: 107px;*/
+  position: relative;
+  background-attachment: fixed;
+
 }
 
 .textdivider h1 {
@@ -423,7 +408,10 @@ hr:before {
 .white p {
 	padding-top: 25px;
 }
-
+/*valores*/
+#values{
+  margin-top: 30px;
+}
 /*Dividers*/
 .divider1 {
 	background-image: url('../img/dividers/divider1.jpg')
@@ -524,7 +512,7 @@ footer {
 /*Contact Form*/
 /**************/
 #global-header {
-  background: url("../img/dividers/contact-bg.jpg") no-repeat;
+  background-image: url("../img/dividers/serv.jpeg");
   background-size: cover;
   padding-top: 150px;
   padding-bottom: 107px;
@@ -540,7 +528,7 @@ footer {
   right: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to left, #7a7a7a, #323038 20%);
+  background: linear-gradient(to left, #d6d6d6, #2d2c2c 0%);
   opacity: 0.8;
 }
 #global-header .block {
@@ -578,7 +566,7 @@ footer {
 #contact-form .block form .form-group .form-control {
   background: #F6F8FA;
   height: 60px;
-  border: 1px solid #EEF2F6;
+  border-bottom:  1px solid #737a82;
   box-shadow: none;
   width: 100%;
 }
@@ -589,19 +577,20 @@ footer {
 #contact-form .block form .form-group-2 textarea {
   background: #F6F8FA;
   height: 135px;
-  border: 1px solid #EEF2F6;
+  border-bottom:  1px solid #737a82;
   box-shadow: none;
   width: 100%;
 }
 #contact-form .block button {
   width: 100%;
   height: 60px;
-  background: #47424C;
+  background: #34495e;
   border: none;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
+
 /*--
 	wrapper-contact Start 
 --*/
@@ -663,7 +652,70 @@ footer {
   color: #5C5C5C;
   display: block;
 }
+.callout h2{
+  font-size: 25px;
+}
+.callout .address-block{
+  padding: 0px 15px;
+}
 
+/*Responsive *Nav**/
+#resp-nav{
+    padding: 10px 15px;
+    width: 100%;
+    z-index: 500;
+}
+#resp-nav.fixed {
+  top:  0px ;
+}
+#logo-nav{
+    position: relative;
+    margin: 0px;
+    left: -90px;
+}
+/***SERVICES FORM****/
+.nav-services{
+  margin-top: 70px;
+}
+.col-lg-6{
+  padding: 0px;
+}
+#title-services{
+  margin-top: 20%;
+}
+#title-services h1{
+  font-size: 4em;
+  color: #34495e;
+}
+#title-services h2{
+  margin-top: 55px;
+  font-size: 3em;
+  color:#cc761a ;
+}
+
+#front-service .box{
+  background-color: #34495e;
+  padding: 20px;
+  color: white;
+  margin-right: 10px;
+  border-radius: 8px 8px 0px 0px;
+  text-align: left ;
+}
+#front-service .accordion{
+  padding: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border:  1px solid #bcbcbc;
+}
+
+#front-service strong{
+  margin-left: 25px;
+  font-size: 25px;
+  padding-top: 5px;
+}
+#front-service .accordion h4{
+  display: inline;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -671,12 +723,15 @@ footer {
     .full-height{
         height: 100%;
     }
-
-    .relative{
+   
+       .relative{
         position: relative;
     }
     .fixed{
         position: fixed;
+    }
+    .container-service{
+      margin-top: 80px;
     }
     .absolute{
         position:absolute;
@@ -812,6 +867,7 @@ footer {
 
 
 @media (max-width: 400px) and (min-width: 260px){
+  /*Media Querie para mobile*/
       #menu-open{
         display: block;
       }
@@ -852,6 +908,44 @@ footer {
     #navigation{
         display: none;
     }
+    .video-container video{
+    /*Oculta el video*/
+    display: none;
+    }
+    .video-container{
+      /*Sustituye el video por una imagen*/
+      background-image: url("../img/dividers/twitter-bg.jpg");
+    }
+
+    /*Form Contact*/
+
+#contact-form .block form .form-group .form-control {
+  background: #F6F8FA;
+  height: 60px;
+  border-bottom:  1px solid #737a82;
+  box-shadow: none;
+  width: 100%;
+}
+    #global-header .block h1{
+      font-weight: 100;
+      font-size: 25px;
+      letter-spacing: 6px;
+      padding-bottom: 15px;
+      margin-top: 0;
+      text-transform: capitalize;
+      color: white;
+
+    } 
+     #global-header .block {
+      padding-left: 0px;
+      text-align: left: ;
+    }
+    #global-header .block p {
+      font-size: 12px;
+    }
+/**RESPONSIVE NAVIGATOR**/
+   #logo-nav{display: none;}
+
 }
 @media (max-width: 1096px)and (min-width: 400px){
 
@@ -882,7 +976,7 @@ footer {
         margin-top: 1em;
         padding: 10px 15px;
       }
-      /*Nav Principal*/
+      /*Responsive Nav */
 
 }
 

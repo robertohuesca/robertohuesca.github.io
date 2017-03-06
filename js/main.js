@@ -1,32 +1,11 @@
-// try{
-// 	navigator.serviceWorker.getRegistration().then((r)=>{r.unregister()
-// 	});
-			  
-// }catch(err){
 
-// }
-/*if(navigator.serviceWorker){
-	navigator.serviceWorker.register("/sw");	
-}*/
 (function(){
 	
 
 	let sticky = false;
 	var map;
 	$(document).ready(()=>{
-		const image_counter = parseInt($("[data-name='image_counter']").attr("content") - 1);
-		let current_position = 0;
-		isOpen();
-		setInterval(()=>{
-			if(current_position < image_counter){
-				current_position++;
-			}else{
-				current_position = 0;
-			}
-			$("#gallery .inner").css({
-				left: "-"+(current_position * 100)+"%"
-			});
-		},3000)
+		
 		$(window).scroll((ev)=>{
 			const inBottom = isInBottom();
 			if(!sticky && inBottom){
@@ -39,16 +18,32 @@
 			}
 		})
 
+	
+
 		$("#menu-open").on("click",()=> {
 			$("#responsive-nav ul").toggleClass("active")
 			$("#menu-open").toggleClass("glyphicon-menu-hamburger")
+
 		})
 		$(".menu-link").on("click",()=> {
 			$("#responsive-nav ul").toggleClass("active")
 			$("#menu-open").toggleClass("glyphicon-menu-hamburger")
 		})
 
-		// google map
+		 $('.services-hidden').hide();
+		  $('.accordion i').on('click',function(){
+		    if($(this).next().is(':visible')){
+		      $(this).next().slideUp(950);
+		      $(this).removeClass("fa fa-minus")
+		       $(this).addClass("fa fa-plus")
+		    }
+		    if($(this).next().is(':hidden')){
+		      $('.accordion i').next().slideUp();
+		      $(this).next().slideDown(950);
+		      $(this).removeClass("fa fa-plus")
+		      $(this).addClass("fa fa-minus")
+		    }
+		  })
 		
 	});
 
@@ -89,10 +84,7 @@
 	}
 
 	
-		function initMap() {
-		  map = new google.maps.Map(document.getElementById('map'), {
-		    center: {lat: -34.397, lng: 150.644},
-		    zoom: 8
-		  });
-		}
+		
 })();
+
+
