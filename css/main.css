@@ -506,7 +506,12 @@ footer {
     margin-bottom: 30px;
 }
 
+.testimonial-image img {
+  max-width: 10px;
+  -moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px;
+}
 
+/*IMAGES*/
 
 /**************/
 /*Contact Form*/
@@ -715,6 +720,10 @@ footer {
 }
 #front-service .accordion h4{
   display: inline;
+}
+
+.accordion i:hover{
+  cursor: pointer;
 }
 /* ==========================================================================
    Helper classes
@@ -946,6 +955,13 @@ footer {
 /**RESPONSIVE NAVIGATOR**/
    #logo-nav{display: none;}
 
+  .address-block li{
+    font-size: 11px;
+  }
+
+  #greywrap p{
+    margin: 0px;
+  }
 }
 @media (max-width: 1096px)and (min-width: 400px){
 
