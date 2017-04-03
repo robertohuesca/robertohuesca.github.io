@@ -1,10 +1,8 @@
 
-(function(){
-	
+$(document).ready(function() {
 
 	let sticky = false;
 	var map;
-	$(document).ready(()=>{
 		
 		$(window).scroll((ev)=>{
 			const inBottom = isInBottom();
@@ -17,9 +15,7 @@
 				unStickNavigation();
 			}
 		})
-
 	
-
 		$("#menu-open").on("click",()=> {
 			$("#responsive-nav ul").toggleClass("active")
 			$("#menu-open").toggleClass("glyphicon-menu-hamburger")
@@ -44,7 +40,20 @@
 		      $(this).addClass("fa fa-minus")
 		    }
 		  })
-		
+
+		  $(".scroll").click(function(event){
+			 event.preventDefault();
+			 var offset = $($(this).attr('href')).offset().top;
+			 $('html, body').animate({scrollTop:offset}, 1000);
+			 })	
+		/**Google Analytics**/	
+		$("#promociones").click(function(event){
+			ga('send', 'event', 'Promociones', 'Clic', 'Boton de promociones pagina principal');
+		})
+		$("#servicios-btn").click(function(event){
+			ga('send', 'event', 'Servicios', 'Clic', 'Boton de servicios pagina principal');
+		})
+			 
 	});
 
 	function isOpen(){
@@ -85,6 +94,6 @@
 
 	
 		
-})();
+
 
 
